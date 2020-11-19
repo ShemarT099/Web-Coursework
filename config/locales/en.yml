@@ -54,3 +54,7 @@ en:
       request_contact:
         no_email: You must supply an email address
         email_sent: Thank you for the email. We will be in touch
+
+    football:
+      title: Premier League
+      standings: Standings

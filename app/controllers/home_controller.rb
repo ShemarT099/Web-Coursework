@@ -5,6 +5,15 @@ class HomeController < ApplicationController
   def contact
   end
 
+  def football
+  end
+
+  def formula1
+  end
+
+  def amfootball
+  end
+
   def request_contact
     name = params[:name]
     email = params[:email]
