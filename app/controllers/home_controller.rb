@@ -5,6 +5,12 @@ class HomeController < ApplicationController
   def contact
   end
 
+  def bookings
+  end
+
+  def my_bookings
+  end
+
   def football
   end
 
