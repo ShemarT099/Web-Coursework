@@ -1,0 +1,27 @@
+%h1 Listing sports
+
+%table
+  %thead
+    %tr
+      %th Title
+      %th Description
+      %th Sport
+      %th Image url
+      %th
+      %th
+      %th
+
+  %tbody
+    - @sports.each do |sport|
+      %tr
+        %td= sport.title
+        %td= sport.description
+        %td= sport.sport_id
+        %td= sport.image_url
+        %td= link_to 'Show', sport
+        %td= link_to 'Edit', edit_sport_path(sport)
+        %td= link_to 'Destroy', sport, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Sport', new_sport_path

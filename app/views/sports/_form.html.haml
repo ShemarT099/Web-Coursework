@@ -1,0 +1,22 @@
+= form_for @sport do |f|
+  - if @sport.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@sport.errors.count, "error")} prohibited this sport from being saved:"
+      %ul
+        - @sport.errors.full_messages.each do |message|
+          %li= message
+
+  .field
+    = f.label :title
+    = f.text_field :title
+  .field
+    = f.label :description
+    = f.text_field :description
+  .field
+    = f.label :sport_id
+    = f.number_field :sport_id
+  .field
+    = f.label :image_url
+    = f.text_field :image_url
+  .actions
+    = f.submit 'Save'

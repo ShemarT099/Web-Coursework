@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @sport.title
+%p
+  %b Description:
+  = @sport.description
+%p
+  %b Sport:
+  = @sport.sport_id
+%p
+  %b Image url:
+  = @sport.image_url
+
+= link_to 'Edit', edit_sport_path(@sport)
+\|
+= link_to 'Back', sports_path

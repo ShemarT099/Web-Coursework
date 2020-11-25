@@ -11,13 +11,7 @@ class HomeController < ApplicationController
   def my_bookings
   end
 
-  def football
-  end
-
-  def formula1
-  end
-
-  def amfootball
+  def Sport
   end
 
   def request_contact

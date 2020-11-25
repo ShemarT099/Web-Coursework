@@ -55,6 +55,9 @@ en:
         no_email: You must supply an email address
         email_sent: Thank you for the email. We will be in touch
 
-    football:
-      title: Premier League
-      standings: Standings
+    book:
+      title: Surrey Sports Bookings
+      intro: Here you can choose the time and date of the sport you would like to book space for.
+    my_bookings:
+      title: Booked Slots
+      intro: These have already been allocated
