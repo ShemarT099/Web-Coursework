@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :books
   resources :sports
 
   devise_for :users
@@ -16,15 +17,14 @@ Rails.application.routes.draw do
 
   resources :home do
     collection do
-      get :my_bookings
+      get :current_bookings
     end
   end
 
   get 'sports', to: 'home#sports'
-  get 'book', to: 'home#book'
-  get 'my_bookings', to: 'home#my_bookings'
+  get 'book', to: 'home#book#new'
+  get 'current_bookings', to: 'home#book'
 
-  get 'football', to: 'home#football'
   get 'contact', to: 'home#contact'
   post 'request_contact', to: 'home#request_contact'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

@@ -1,0 +1,29 @@
+%h1 Bookings
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Email
+      %th Sport
+      %th When
+      %th Tickets
+      %th
+      %th
+      %th
+
+  %tbody
+    - @books.each do |book|
+      %tr
+        %td= book.Name
+        %td= book.Email
+        %td= book.sport_id
+        %td= book.When
+        %td= book.Tickets
+        %td= link_to 'Show', book
+        %td= link_to 'Edit', edit_book_path(book)
+        %td= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Book', new_book_path

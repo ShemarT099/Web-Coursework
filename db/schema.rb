@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_21_174019) do
+ActiveRecord::Schema.define(version: 2020_11_25_220446) do
 
   create_table "articles", force: :cascade do |t|
     t.string "title"
@@ -21,9 +21,20 @@ ActiveRecord::Schema.define(version: 2020_11_21_174019) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "books", force: :cascade do |t|
+    t.string "Name"
+    t.string "Email"
+    t.integer "sport_id"
+    t.datetime "When"
+    t.integer "Tickets"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["sport_id"], name: "index_books_on_sport_id"
+  end
+
   create_table "sports", force: :cascade do |t|
-    t.string "title", null: false
-    t.text "description", null: false
+    t.string "title"
+    t.string "description"
     t.integer "sport_id"
     t.string "image_url"
     t.datetime "created_at", null: false

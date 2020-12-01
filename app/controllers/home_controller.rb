@@ -5,6 +5,9 @@ class HomeController < ApplicationController
   def contact
   end
 
+  def books
+  end
+
   def bookings
   end
 

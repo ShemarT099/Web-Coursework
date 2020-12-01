@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @book.Name
+%p
+  %b Email:
+  = @book.Email
+%p
+  %b Sport:
+  = @book.sport_id
+%p
+  %b When:
+  = @book.When
+%p
+  %b Tickets:
+  = @book.Tickets
+
+= link_to 'Edit', edit_book_path(@book)
+\|
+= link_to 'Back', books_path

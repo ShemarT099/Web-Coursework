@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Name: MyString
+  Email: MyString
+  sport: one
+  When: 2020-11-25 22:04:47
+  Tickets: 1
+
+two:
+  Name: MyString
+  Email: MyString
+  sport: two
+  When: 2020-11-25 22:04:47
+  Tickets: 1
