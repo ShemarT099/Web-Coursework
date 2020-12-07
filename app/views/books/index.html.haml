@@ -1,7 +1,13 @@
 %h1 Bookings
 
+%p#book Below are details regarding slots that have already been booked
+
+= link_to 'Home', root_path
+
+%br
+
 %table
-  %thead
+  %thead#head
     %tr
       %th Name
       %th Email
@@ -9,21 +15,21 @@
       %th When
       %th Tickets
       %th
-      %th
-      %th
+
 
   %tbody
     - @books.each do |book|
       %tr
         %td= book.Name
         %td= book.Email
-        %td= book.sport_id
+        %td= book.sport.try(:title)
         %td= book.When
         %td= book.Tickets
-        %td= link_to 'Show', book
-        %td= link_to 'Edit', edit_book_path(book)
         %td= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' }
+
 
 %br
 
-= link_to 'New Book', new_book_path
+= link_to 'New Booking', new_book_path
+
+%p#ad Advertise here

@@ -30,13 +30,13 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  app_title: My Website
+  app_title: Sport and Activity booking
   app_description: A website
 
   home:
     home:
-      title: My Website
-      welcome: Welcome to my Website
+      title: Sport and Activity booking
+      welcome: Welcome to my Website, here you can view the different sports available and book a time and date for the space
     contact:
       title: Contact Us
       contact_us: Complete the following form to get in touch with us.
@@ -55,9 +55,9 @@ en:
       no_email: You must supply an email address
       email_sent: Thank you for the email. We will be in touch
 
-  books:
-    title: Surrey Sports Bookings
-    intro: Here you can choose the time and date of the sport you would like to book space for.
-    my_bookings:
-      title: Booked Slots
-      intro: These have already been allocated
+    books:
+      title: Surrey Sports Bookings
+      intro: Here you can choose the time and date of the sport you would like to book space for.
+      index:
+        title: Booked Slots
+        intro: These have already been allocated

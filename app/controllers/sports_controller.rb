@@ -1,6 +1,7 @@
 class SportsController < ApplicationController
   before_action :set_sport, only: [:show, :edit, :update, :destroy]
 
+  
   # GET /sports
   # GET /sports.json
   def index
@@ -59,6 +60,10 @@ class SportsController < ApplicationController
       format.html { redirect_to sports_url, notice: 'Sport was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def title
+    @title = @sport.title
   end
 
   private

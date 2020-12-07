@@ -3,7 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 form label{
   display: block;
-  margin: 10px;
+  margin: 20px;
+  border-radius:10px;
 }
  form input{
   display: block;
@@ -15,6 +16,10 @@ form label{
 
 form input:focus{
   border: 3px solid #555
+}
+
+body{
+  background-color: red;
 }
 
 

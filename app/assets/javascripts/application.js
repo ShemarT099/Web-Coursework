@@ -16,3 +16,8 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+$(":text, :file, :checkbox, select, textarea").each(function() {
+   if($(this).val() === "")
+    alert("Empty Fields!!");
+});

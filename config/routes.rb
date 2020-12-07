@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
+  resources :surveys
   resources :books
   resources :sports
+  resources :current_bookings
 
   devise_for :users
   resources :tasks
@@ -20,10 +22,11 @@ Rails.application.routes.draw do
       get :current_bookings
     end
   end
-
+  get 'Home', to: 'home#home'
   get 'sports', to: 'home#sports'
   get 'book', to: 'home#book#new'
   get 'current_bookings', to: 'home#book'
+  get 'Take a Survey', to: 'home#survey#new'
 
   get 'contact', to: 'home#contact'
   post 'request_contact', to: 'home#request_contact'
