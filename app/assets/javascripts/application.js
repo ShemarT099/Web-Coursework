@@ -21,3 +21,13 @@ $(":text, :file, :checkbox, select, textarea").each(function() {
    if($(this).val() === "")
     alert("Empty Fields!!");
 });
+
+// Code for expand and collapse buttons on booking list 
+$(document).ready(function(){
+  $(".btn1").click(function(){
+    $("td").slideUp();
+  });
+  $(".btn2").click(function(){
+    $("td").slideDown();
+  });
+});

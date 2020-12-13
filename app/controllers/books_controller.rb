@@ -1,6 +1,10 @@
 class BooksController < ApplicationController
   before_action :set_book, only: [:show, :edit, :update, :destroy]
 
+  # Create a function to  get total amount paid for each booking (Sportprice * Tickets)
+  def totalamount
+    @total = Book.Tickets * Book.sport_price.price
+  end
   # GET /books
   # GET /books.json
   def index

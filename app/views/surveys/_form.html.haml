@@ -1,3 +1,7 @@
+
+
+%p#notice You can leave name empty to be anonymous
+
 = form_for @survey do |f|
   - if @survey.errors.any?
     #error_explanation
@@ -5,6 +9,8 @@
       %ul
         - @survey.errors.full_messages.each do |message|
           %li= message
+
+
 
   .field
     = f.label :name

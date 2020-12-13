@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Sport:
+  = @sport_price.sport
+%p
+  %b Price:
+  = @sport_price.price
+
+= link_to 'Edit', edit_sport_price_path(@sport_price)
+\|
+= link_to 'Back', sport_prices_path

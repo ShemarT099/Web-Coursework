@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :sport_prices
   resources :surveys
   resources :books
   resources :sports
@@ -27,6 +28,7 @@ Rails.application.routes.draw do
   get 'book', to: 'home#book#new'
   get 'current_bookings', to: 'home#book'
   get 'Take a Survey', to: 'home#survey#new'
+  get 'sportprices', to: 'home#sport_prices'
 
   get 'contact', to: 'home#contact'
   post 'request_contact', to: 'home#request_contact'

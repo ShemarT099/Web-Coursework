@@ -1,0 +1,16 @@
+= form_for @sport_price do |f|
+  - if @sport_price.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@sport_price.errors.count, "error")} prohibited this sport_price from being saved:"
+      %ul
+        - @sport_price.errors.full_messages.each do |message|
+          %li= message
+
+  .field
+    = f.label :sport
+    = f.collection_select :sport_id, Sport.all, :sport_id, :title, prompt: true
+  .field
+    = f.label :price
+    = f.number_field :price
+  .actions
+    = f.submit 'Save'

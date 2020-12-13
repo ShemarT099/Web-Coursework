@@ -1,6 +1,9 @@
 %h1 Sports
 
 = link_to 'Home', root_path
+%br
+= link_to 'Ticket prices', sport_prices_path
+%br
 
 %table
 
@@ -9,6 +12,7 @@
     - @sports.each do |sport|
       %tr
         %td= sport.title
+        %td= sport.description
         .overlay
           %td= image_tag(sport.image_url, class: 'image')
 

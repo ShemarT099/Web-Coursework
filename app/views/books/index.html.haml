@@ -5,6 +5,7 @@
 = link_to 'Home', root_path
 
 %br
+%br
 
 %table
   %thead#head
@@ -23,11 +24,19 @@
         %td= book.Name
         %td= book.Email
         %td= book.sport.try(:title)
-        %td= book.When
+        %td= book.When.strftime("%-d/%-m/%y: %H:%M ")
         %td= book.Tickets
-        %td= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' }
+        %td= book.sport_price.try(:price)
 
 
+
+%br
+%button.btn1 Collapse
+%button.btn2 Expand
+%br
+%br
+%br
+%br
 %br
 
 = link_to 'New Booking', new_book_path
